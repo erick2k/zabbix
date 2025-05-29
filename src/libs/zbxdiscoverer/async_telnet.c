@@ -19,6 +19,7 @@
 #include "zbxtimekeeper.h"
 #include "zbxcomms.h"
 #include "zbxself.h"
+#include "zbxip.h"
 
 ZBX_VECTOR_IMPL(telnet_recv, unsigned char)
 
@@ -217,10 +218,14 @@ static int	telnet_task_process(short event, void *data, int *fd, zbx_vector_addr
 	{
 		case ZABBIX_TELNET_STEP_CONNECT_INIT:
 			/* initialization */
-			zabbix_log(LOG_LEVEL_DEBUG, "%s() step '%s' event:%d itemid:" ZBX_FS_UI64 " [%s:%d]", __func__,
+			char	ip_port[MAX_STRING_LEN];
+
+			zabbix_log(LOG_LEVEL_DEBUG, "%s() step '%s' event:%d itemid:" ZBX_FS_UI64 " [%s]", __func__,
 					get_telnet_step_string(telnet_context->step), event,
 					telnet_context->item.itemid, addresses->values[0].ip,
-					telnet_context->item.interface.port);
+					telnet_context->item.itemid,
+					zbx_join_hostport(ip_port, sizeof(ip_port), addresses->values[0].ip,
+					telnet_context->item.interface.port));
 
 			if (SUCCEED != zbx_socket_connect(&telnet_context->s, SOCK_STREAM,
 					telnet_context->config_source_ip, addresses->values[0].ip,
