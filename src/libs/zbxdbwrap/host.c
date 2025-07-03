@@ -6073,7 +6073,7 @@ zbx_uint64_t	zbx_db_add_interface(zbx_uint64_t hostid, unsigned char type, unsig
 					interfaceid, db_useip, useip);
 		}
 
-		if (ZBX_CONN_IP == flags && 0 != strcmp(db_ip, ip))
+		if ((ZBX_CONN_DEFAULT == flags || ZBX_CONN_IP == flags) && 0 != strcmp(db_ip, ip))
 		{
 			ip_esc = zbx_db_dyn_escape_field("interface", "ip", ip);
 			zbx_snprintf_alloc(&update, &update_alloc, &update_offset, "%cip='%s'", delim, ip_esc);
@@ -6083,7 +6083,7 @@ zbx_uint64_t	zbx_db_add_interface(zbx_uint64_t hostid, unsigned char type, unsig
 					db_ip, ip);
 		}
 
-		if (ZBX_CONN_DNS == flags && 0 != strcmp(db_dns, dns))
+		if ((ZBX_CONN_DEFAULT == flags || ZBX_CONN_DNS == flags) && 0 != strcmp(db_dns, dns))
 		{
 			dns_esc = zbx_db_dyn_escape_field("interface", "dns", dns);
 			zbx_snprintf_alloc(&update, &update_alloc, &update_offset, "%cdns='%s'", delim,
@@ -6095,8 +6095,7 @@ zbx_uint64_t	zbx_db_add_interface(zbx_uint64_t hostid, unsigned char type, unsig
 		}
 
 		tmp = strdup(row[4]);
-		zbx_substitute_simple_macros(NULL, NULL, NULL, NULL, &hostid, NULL, NULL, NULL, NULL, NULL,
-					NULL, NULL, &tmp, ZBX_MACRO_TYPE_COMMON, NULL, 0);
+		zbx_dc_expand_user_and_func_macros(um_handle, &tmp, &hostid, 1, NULL);
 
 		if (FAIL == zbx_is_ushort(tmp, &db_port) || db_port != port)
 		{
