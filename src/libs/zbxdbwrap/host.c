@@ -6095,7 +6095,8 @@ zbx_uint64_t	zbx_db_add_interface(zbx_uint64_t hostid, unsigned char type, unsig
 		}
 
 		tmp = strdup(row[4]);
-		zbx_dc_expand_user_and_func_macros(um_handle, &tmp, &hostid, 1, NULL);
+		zbx_substitute_simple_macros(NULL, NULL, NULL, NULL, &hostid, NULL, NULL, NULL, NULL, NULL,
+					NULL, NULL, &tmp, ZBX_MACRO_TYPE_COMMON, NULL, 0);
 
 		if (FAIL == zbx_is_ushort(tmp, &db_port) || db_port != port)
 		{
