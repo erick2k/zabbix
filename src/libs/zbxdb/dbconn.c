@@ -652,7 +652,7 @@ static int	dbconn_open(zbx_dbconn_t *db)
 
 	zbx_db_free_result(result);
 
-	result = dbconn_select("select pg_is_in_recovery();");
+	result = dbconn_select(db, "select pg_is_in_recovery();");
 
 	if ((zbx_db_result_t)ZBX_DB_DOWN == result || NULL == result)
 	{
