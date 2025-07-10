@@ -660,7 +660,7 @@ static int	dbconn_open(zbx_dbconn_t *db)
 		goto out;
 	}
 
-	if (NULL != (row = zbx_db_fetch_basic(result)))
+	if (NULL != (row = zbx_db_fetch(result)))
 	{
 		if (0 == strcmp(row[0], "t"))
 		{
