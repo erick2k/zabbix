@@ -4,8 +4,8 @@ msgstr ""
 "Project-Id-Version: Zabbix 6.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-10-19 13:48+0300\n"
-"PO-Revision-Date: 2025-04-28 11:48+0000\n"
-"Last-Translator: Andrey <i@ashekhov.ru>\n"
+"PO-Revision-Date: 2025-07-09 07:18+0000\n"
+"Last-Translator: Alexey <alexey.pustovalov@zabbix.com>\n"
 "Language-Team: Zabbix translation team\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -7277,7 +7277,7 @@ msgstr "Обнаружение VMware кластеров, \"url\" - URL служ
 
 #: include/classes/data/CItemData.php:1932
 msgid "Discovery of VMware datastores, \"url\" - VMware service URL, \"filter_uuid\" - one hv uuid or vm uuid (empty by default). Returns JSON"
-msgstr ""
+msgstr "Обнаружение VMware хранилищ данных, \"url\" - URL службы VMware, \"filter_uuid\" - uuid гипервизора или uuid виртуальной машины (по умолчанию пустой). Возвращает JSON"
 
 #: include/classes/data/CItemData.php:1799
 msgid "Discovery of VMware datastores, \"url\" - VMware service URL. Returns JSON"
@@ -22788,7 +22788,7 @@ msgstr "Пользователи"
 
 #: include/locales.inc.php:62
 msgid "Uzbek (uz_UZ)"
-msgstr ""
+msgstr "Узбекский (uz_UZ)"
 
 #: include/classes/data/CItemData.php:1876
 msgid "VMware Distributed Virtual Switch, \"url\" - VMware service URL. Returns JSON"
