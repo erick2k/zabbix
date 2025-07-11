@@ -34,7 +34,6 @@
 #include "zbxxml.h"
 #include "zbxjson.h"
 #include "zbxexpr.h"
-#include "zbxcacheconfig.h"
 #include "zbx_expression_constants.h"
 
 #define ZBX_AM_LOCATION_NOWHERE			0
