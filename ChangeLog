@@ -11,7 +11,6 @@ Bug fixes:
 ........S. [ZBX-26591] fixed detection of read-only state in PostgreSQL replicated database (sboidenko)
 .......PS. [ZBX-25545] fixed host interface duplication in autoregistration mode (vsmelovs)
 ..F....... [ZBX-21955] fixed display of mapped numerical values in Latest data of multiple items (wczerneha)
-.......PS. [ZBX-26294] improved logics of SNMP cache cleanup (dgoloscapov)
 ...G...... [ZBX-26477] fixed vfs.dir.get ignoring entries with 0 unixtime and fixed vfs.file.get having null values for time fields in this case (dgoloscapov)
 ..F....... [ZBX-25956] removed excess suggestions from item copy target list (talbergs)
 ..F....... [ZBX-25952] fixed inconsistent duo 'client secret' field validation (aluchko)
