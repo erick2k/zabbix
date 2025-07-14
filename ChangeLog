@@ -11,6 +11,7 @@ Bug fixes:
 ........S. [ZBX-26591] fixed detection of read-only state in PostgreSQL replicated database (sboidenko)
 .......PS. [ZBX-25545] fixed host interface duplication in autoregistration mode (vsmelovs)
 ..F....... [ZBX-21955] fixed display of mapped numerical values in Latest data of multiple items (wczerneha)
+.......PS. [ZBX-26294] improved logic of SNMP cache cleanup (dgoloscapov)
 ...G...... [ZBX-26477] fixed vfs.dir.get ignoring entries with 0 unixtime and fixed vfs.file.get having null values for time fields in this case (dgoloscapov)
 ..F....... [ZBX-25956] removed excess suggestions from item copy target list (talbergs)
 ..F....... [ZBX-25952] fixed inconsistent duo 'client secret' field validation (aluchko)
@@ -54,7 +55,6 @@ New features:
 Bug fixes:
 .......PS. [ZBX-26537] fixed memory over-allocation in preprocessing manager (vso)
 ..F....... [ZBX-26422] added missing translation string for "Tags" label in "Tags" tab in configuration forms (solonkins)
-.......PS. [ZBX-26294] improved logic of SNMP cache cleanup (dgoloscapov)
 ..F....... [ZBX-21087] fixed not all aggregation functions working with foreach functions (aluchko)
 A......... [ZBX-26191] fixed inconsistent API and frontend validation for maintenance period 'every' and 'period' fields (aluchko)
 A.F....... [ZBX-23167] fixed issues with Host dashboards not displaying widgets from inaccessible templates; added hostdashboard object API (jfreibergs, vmaksimovs)
