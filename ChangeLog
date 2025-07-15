@@ -4,6 +4,8 @@ New features:
 ........S. [ZBXNEXT-10018] updated maximal supported TimescaleDB version to 2.20 (mprihodko)
 
 Bug fixes:
+...G...PS. [ZBX-26082] fixed agent2 and proxy redirection bug related to incorrect IPv6 string format (vsmelovs)
+..F....... [ZBX-25958] fixed incorrect dependency hosts format in trigger form (esekace)
 .......PS. [ZBX-26528] fixed improper handling of long or corrupted ODBC error messages (dgoloscapov)
 ........S. [ZBX-26495] added parameter support for database down script media type (askolmeisters)
 ........S. [ZBX-26370] fixed HA node recovery after standby, free id cache (sboidenko)
@@ -558,6 +560,9 @@ New features:
 .........T [ZBXNEXT-9674] added AssumeRole usage with metadata authentication for AWS templates (egordymov)
 
 Bug fixes:
+A......... [ZBX-26439] prevented data integrity loss caused by simultaneous API change request execution (vmaksimovs)
+...G...PS. [ZBX-26082] fixed agent2 and proxy redirection bug related to incorrect IPv6 string format (vsmelovs)
+..F....... [ZBX-25958] fixed incorrect dependency hosts format in trigger form (esekace)
 A......... [ZBX-26436] prevented redundant row locks in the database when deleting hosts in parallel API requests (vmaksimovs)
 .......PS. [ZBX-26528] fixed improper handling of long or corrupted ODBC error messages (dgoloscapov)
 .........T [ZBX-25313] added boot time item to VMware Guest template (akotsegubov)
