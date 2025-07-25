@@ -27,4 +27,4 @@ Chapple, M. (2023). CompTIA Security+ Study Guide: Exam SY0-601 (8th ed.). Wiley
 
 Zabbix Documentation. (2025). Installation from packages. https://www.zabbix.com/documentation
 
-Nemeth, E., Snyder, G., Hein, T. R., & Whaley, B. (2021). UNIX and Linux system administration handbook (6th ed.). Pearson.  
+Nemeth, E., Snyder, G., Hein, T. R., & Whaley, B. (2021). UNIX and Linux system administration handbook (6th ed.). Pearson.
